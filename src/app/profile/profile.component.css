@@ -1,0 +1,63 @@
+.page-header.profile-page {
+    height: 100vh !important;
+}
+
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+}
+@media(max-width: 768px) {
+  .modal-dialog {
+    min-height: calc(100vh - 20px);
+  }
+}
+
+#shareIcons{
+    text-align: center;
+    display: inline;
+}
+.dialog {
+    padding: 10px 12px !important;
+}
+.jssocials-shares {
+    display: inline-block;
+}
+.jssocials-share:last-child {
+    margin: 0.3em 0.6em 0.3em 0;
+}
+.dialoghead {
+    display: inline-block;
+    margin-top: 0;
+}
+.jssocials-share-message{
+    background: orange;
+    color: #fff;
+}
+.jssocials-share-message .jssocials-share-link:hover
+{
+    background: orange;
+    color: #fff;
+}
+.card-profile .card-content {
+    padding: 0 25px !important;
+ }
+
+ .card-companylogo .card-content {
+    padding: 10px !important;
+ }
+ .card-companylogo .card-content img {
+     width:50%;
+ }
+ .card-companylogo .card-content {
+     margin-top: 0 auto;
+     text-align: center;
+ }
+ .company-address {
+    background: linear-gradient(60deg, #66bb6a, #388e3c);
+ }
+ .company-address h5 {
+     margin-bottom: 10px;
+ }

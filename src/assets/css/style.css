@@ -1,0 +1,220 @@
+.card-profile {
+    margin-top: 0px;
+}
+
+a.mailtag,
+a.smstag {
+    padding: 0.2em;
+    color: #1b1c1b;
+}
+
+a.mailtag:hover,
+a.smstag:hover,
+a.website:hover {
+    color: #6684bb;
+}
+
+a.mailtag i {
+    color: #fff;
+    background-color: rgb(55, 54, 54);
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 15px;
+}
+
+a.smstag i {
+    background-color: #393838;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+a.website {
+    padding: 0.3em;
+    color: #55acee;
+}
+
+a.smsicon i {
+    color: #fff;
+    ;
+}
+
+a.smsicon:hover {
+    color: #6684bb;
+}
+
+span.twitername {
+    font-size: 0.7em;
+}
+
+.stats {
+    font-size: 11px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 15px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contactcard {
+    background-color: rgb(245, 238, 238);
+    border-radius: 10px !important;
+}
+
+.contact-page {
+    padding: 15px 18px !important;
+    background-color: rgb(169, 169, 169) !important;
+}
+
+h4.contact {
+    padding-left: 12px;
+    color: #000 !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    background-color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.para {
+    padding-left: 4px;
+    padding-right: 3px;
+    /* border-top: 1px solid #908f8b; */
+}
+
+.para p {
+    margin: 10px 0 5px;
+    padding: 6px;
+    /* border: 11px solid rgb(214, 208, 208);
+    border-radius: 23px; */
+}
+
+p {
+    overflow: hidden;
+}
+
+.card-youtube {
+    padding: 5px 5px !important;
+}
+
+ul.social-buttons {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 17px;
+}
+
+ul.social-buttons li {
+    display: inline-block;
+    padding: 0px 8px;
+}
+
+
+/* ul.social-buttons li:nth-child(3) a {
+    font-size: 25px !important;
+    width: 32px;
+    background-color: 
+} */
+
+ul.social-buttons li a.btn-just-icon {
+    font-size: 20px;
+    padding: 0px;
+    line-height: 1em;
+}
+
+ul.social-buttons li a.btn-just-icon i,
+ul.social-buttons li:nth-child(3) a {
+    width: 32px;
+    padding: 5px;
+    font-size: 23px;
+    background-color: #5791b3 !important;
+    border-radius: 50%;
+    color: #fff !important;
+}
+
+ul.social-buttons li:nth-child(3) a span {
+    position: relative;
+    top: -2px;
+}
+
+.double-link .btn.btn-just-icon i {
+    width: 18px;
+}
+
+.card.company-address {
+    margin-bottom: 20px;
+}
+
+.footer-icons {
+    margin-bottom: 20px;
+}
+
+a.addresslink i {
+    color: #fff;
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    ul.social-buttons li {
+        display: inline-block;
+        padding: 0px 2px;
+    }
+    .double-link .btn.btn-just-icon i {
+        width: 17px;
+    }
+    .card img {
+        margin-bottom: 15px;
+    }
+    a.website {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:993px) and (max-width:1200px) {
+    ul.social-buttons li {
+        display: inline-block;
+        padding: 0px 2px;
+    }
+    .double-link .btn.btn-just-icon i {
+        width: 17px;
+    }
+    .card img {
+        margin-bottom: 8px;
+    }
+    a.website {
+        font-size: 9px !important;
+    }
+}
+
+@media (max-width:767px) {
+    .card img {
+        margin-bottom: 11px;
+    }
+}
+
+@media (min-width:1201px) {
+    ul.social-buttons li {
+        display: inline-block;
+        padding: 0px 2px;
+    }
+    .card .companysite {
+        padding: 15px 15px;
+    }
+    .card img {
+        margin-bottom: 4px;
+    }
+    a.website {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,175 @@
+<div class="page-header header-filter profile-page" data-parallax="true" style="background-image: url('./assets/img/city.jpg'); background-repeat:no-repeat; background-attachment: fixed; overflow-y:scroll;">
+    <div class="container" style="padding-top:70px;">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="#pablo">
+                            <img class="img" src="{{profiledetails?.profilepic}}">{{profiledetails?.profileimageurl}}
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="social-buttons">
+                                <li>
+                                    <a href="tel:{{profiledetails?.primarycontact}}" id="elem" class="btn btn-just-icon btn-simple btn-twitter">
+                                        <i class="material-icons">phone</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a [href]=primarycontact class="btn btn-just-icon btn-simple btn-facebook">
+                                        <i class="material-icons">message</i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:{{profiledetails?.primaryemail}}" class="btn btn-just-icon btn-simple btn-dribbble">
+                                        <span class="alternalt-mail">@</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a (click)="callshare()" class="btn btn-just-icon btn-simple btn-google">
+                                        <i class="fa fa-share-alt"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a (click)="downLoadvCard()" class="btn btn-just-icon btn-simple btn-youtube">
+                                        <i class="material-icons" id="alertButton" (click)="download()">file_download</i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h4 class="card-title">
+                            <a href="#pablo"> {{profiledetails?.firstname}} {{profiledetails?.lastname}}</a>
+                        </h4>
+                        <h6 class="category text-gray">{{profiledetails?.designation}}</h6>
+                        <h4 class="card-title">{{profiledetails?.companyname}}</h4>
+                        <p class="card-description">{{profiledetails?.description}}</p>
+
+                        <div class="row hidden-xs">
+                            <div class="footer double-link text-center">
+                                <a href="{{profiledetails?.twitterlink}}" *ngIf="profiledetails && profiledetails.twitterlink" target="_blank" class="btn btn-just-icon btn-twitter btn-round">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="{{profiledetails?.fblink}}" *ngIf="profiledetails && profiledetails.fblink" target="_blank" class="btn btn-just-icon btn-facebook btn-round">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="{{profiledetails?.gpluslink}}" *ngIf="profiledetails && profiledetails.gpluslink" target="_blank" class="btn btn-just-icon btn-google btn-round">
+                                    <i class="fa fa-google"></i>
+                                </a>
+                                <a href="{{profiledetails?.linkedin}}" *ngIf="profiledetails && profiledetails.linkedin" target="_blank" class="btn btn-just-icon btn-linkedin btn-round">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card visible-xs-block hidden-sm card-companylogo">
+                    <div class="card-content">
+                        <img class="img" src="{{profiledetails?.companylogo}}" width="100%">
+                        <div class="text-center">
+                            <a href="{{profiledetails?.companywebsite}}" class="website">{{profiledetails?.companywebsite}}</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div *ngIf="profiledetails && profiledetails.slideshareurl || profiledetails && profiledetails.youtubeurl">
+                        <div class="col-md-9">
+                            <div *ngIf="profiledetails && profiledetails.slideshareurl">
+                                <div class="card" *ngIf="loaded">
+                                    <div class="card-content visible-xs-block hidden-sm" style="padding:5px">
+                                        <iframe [src]=slideurl width="595" height="310" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;margin-bottom:-6px; border-width:1px; max-width: 100%;"
+                                            allowfullscreen> </iframe>
+                                    </div>
+                                    <div class="card-content hidden-xs" style="padding:5px">
+                                        <iframe [src]=slideurl width="854" height="480" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;margin-bottom:-6px; border-width:1px; max-width: 100%;"
+                                            allowfullscreen> </iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div *ngIf="profiledetails && profiledetails.youtubeurl">
+                                <div class="card" *ngIf="loaded">
+                                    <div class="card-content card-youtube">
+                                        <div class="video-container">
+                                            <iframe width="854" height="480" [src]=youtubeurl frameborder="0" gesture="media" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="card hidden-xs">
+                            <div class="card-content companysite">
+                                <img class="img" src="{{profiledetails?.companylogo}}" width="100%">
+                                <div class="text-center">
+                                    <a href="" class="website">{{profiledetails?.companywebsite}}</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card company-address">
+                            <div class="card-content content-success" style="padding:0 10px;">
+                                <h5 class="category-social clearfix">
+                                    <i class="fa fa-newspaper-o pull-left"></i> Address
+
+                                    <!-- <a href="" class="addresslink"><i class="material-icons pull-right" id="alertButton" (click)="download()">cloud_download</i></a> -->
+                                </h5>
+
+                                <p class="card-description">
+                                    {{profiledetails?.address}}
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="row visible-xs-block">
+                            <div class="footer double-link footer-icons  text-center ">
+                                <a href="{{profiledetails?.twitterlink}}" *ngIf="profiledetails && profiledetails.twitterlink" target="_blank" class="btn btn-just-icon btn-twitter btn-round">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a href="{{profiledetails?.fblink}}" *ngIf="profiledetails && profiledetails.fblink" target="_blank" class="btn btn-just-icon btn-facebook btn-round">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a href="{{profiledetails?.gpluslink}}" *ngIf="profiledetails && profiledetails.gpluslink" target="_blank" class="btn btn-just-icon btn-google btn-round">
+                                    <i class="fa fa-google"></i>
+                                </a>
+                                <a href="{{profiledetails?.linkedin}}" *ngIf="profiledetails && profiledetails.linkedin" target="_blank" class="btn btn-just-icon btn-linkedin btn-round">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-dialog [(visible)]="showDialog">
+    <h5 class="dialoghead"> Profile Social Share</h5>
+    <div style="text-align:center" align="center">
+        <div id="shareIcons" style="inline-block"></div>
+        <div class="jssocials-share jssocials-share-message" style="margin-top:7px">
+            <a class="jssocials-share-link" [href]="mobileShare()">
+                <i class="fa fa-commenting jssocials-share-logo"></i>
+            </a>
+        </div>
+    </div>
+
+    <div align="center">
+        <button (click)="showDialog = !showDialog" class="btn btn-next btn-fill btn-warning btn-wd" style="background-color: #f44336">Close</button>
+    </div>
+</app-dialog>
